@@ -16,7 +16,7 @@ namespace MyWorkerService
                 .MinimumLevel.Debug()
                 .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
                 .Enrich.FromLogContext()
-                .WriteTo.File(@"C:\Users\Przemek\source\repos\MyWorkerService\MyWorkerService\logFile.txt")
+                .WriteTo.File(@"logFile.txt")
                 .CreateLogger();
 
             try

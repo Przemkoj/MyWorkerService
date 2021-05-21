@@ -48,7 +48,7 @@ namespace MyWorkerService
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 if (response.IsSuccessStatusCode)
                 {
-                    var object1 = response.Content.ReadAsStringAsync(stoppingToken).Result.ToString();                  
+                    var object1 = response.Content.ReadAsStringAsync(stoppingToken).Result.Trim('"');                  
                     _logger.LogInformation("Web service via rest api    : {0}", object1);                  
                 }
                 else
